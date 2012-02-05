@@ -20,6 +20,12 @@ for i, u in enumerate(BeautifulSoup(open('top100.html').read()).findAll('h6')[1:
     for c in BeautifulSoup(open('top100/'+handle).read()).findAll('h5'):
         if c.b:
             user[c.a['href'].split('/')[-1]] = c.b.text.split('/')[0]
+        else:
+            try:
+                del user[c.a['href'].split('/')[-1]]
+                print 'del '+c.a['href'].split('/')[-1]
+            except:
+                pass
     r1, r2 = rank1(user), rank2(user)
     print '%4d %-16s %6d %6d %6d %6d %6d' % (i+1, handle, r1, r2, r1+r2, r1-o1, r2-o2)
     o1, o2 = r1, r2

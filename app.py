@@ -4,8 +4,24 @@ import logging
 import urllib
 from google.appengine.ext import db
 from BeautifulSoup import BeautifulSoup
+import web
+
+urls = (
+    '/', 'index',
+    '/update', 'update',
+)
+
+class index:
+    """URL handler for /"""
+
+    def GET(self):
+        golfers = top_golfers()
+        for golfer in golfers:
+            print '<div>%d %s %d</div>' % (golfer.rank, golfer.handle, golfer.g_rank)
 
 class Golfer(db.Model):
+    """Data model for user"""
+
     handle = db.StringProperty()
     rank = db.IntegerProperty()
     g_rank = db.IntegerProperty()
@@ -54,9 +70,7 @@ def top_golfers():
         golfers.append(golfer)
     return golfers
 
-print 'Content-Type: text/html\n'
-
-golfers = top_golfers()
-for golfer in golfers:
-    print '<div>%d %s %d</div>' % (golfer.rank, golfer.handle, golfer.g_rank)
+if __name__ == '__main__':
+    app = web.application(urls, globals())
+    app.cgirun()
 
