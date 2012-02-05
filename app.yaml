@@ -1,4 +1,4 @@
-application: vimgolf_rank
+application: vimgolf-rank
 version: 1
 runtime: python
 api_version: 1
