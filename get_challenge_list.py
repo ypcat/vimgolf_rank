@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Get info of each challenge, and store them to db.
+# Get a list of challenges, and then store them to db.
 
 import logging
 import urllib

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# Get info of each challenge, and store them to db.
+# Get number of active golfers of each challenge, and store them to db.
 
 import logging
 import urllib
