@@ -1,0 +1,1058 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta http-equiv="Cache-control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>VimGolf - real Vim ninjas count every keystroke!</title>
+
+  <link href="/stylesheets/960.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/forms.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/jquery-ui-1.8.6.custom.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/prettify.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/reset.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/scaffold.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/screen.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/site.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/text.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="/javascripts/prettify/prettify.js?1311900365" type="text/javascript"></script>
+  <script src="/javascripts/jquery.min.js?1311900365" type="text/javascript"></script>
+  <script src="/javascripts/jquery-ui.min.js?1311900365" type="text/javascript"></script>
+  <script src="/javascripts/application.js?1311900365" type="text/javascript"></script>
+
+  <link href="http://feeds.vimgolf.com/latest-challenges" rel="alternate" title="Latest VimGolf challenges" type="application/rss+xml" />
+
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="BPzxdG/za/6IDcj3yvW/eInQlC+hIXeJysQnqJdUVX8="/>
+</head>
+
+<body onload="prettyPrint()">
+  <div id="header" class="container_12 clearfix">
+    <div id="logo">
+      <div><a href="/"><img src="/images/vim_golf_logo.png"> VimGolf</a></div>
+    </div>
+    <div id="navigation">
+      <ul id="nav">
+            <li><a href="/auth/twitter">Sign in with Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="about" class="container_12 clearfix">
+      <div id="about" class="grid_7">
+        <h3 style="margin:0.5em 0 0.5em 0">Real Vim ninjas count <b>every</b> keystroke - do you?</h3>
+        <h6>Pick a challenge, fire up Vim, and show us what you got.</h6>
+        <p><b><a href="/top">Leaderboard</a></b>, <a href="/about">Changelog, Rules &amp; FAQ</a>, updates: <a href="http://twitter.com/vimgolf">@vimgolf</a>, <a href="http://feeds.vimgolf.com/latest-challenges">RSS</a>.</p>
+      </div>
+      <div id="instructions" class="grid_5">
+<pre class="terminal">
+<span class="shell">Your VimGolf key: <a href="/auth/twitter">please sign in</a></span>
+
+<span class="shell">$</span> gem install vimgolf
+<span class="shell">$</span> vimgolf setup
+<span class="shell">$</span> vimgolf put [challenge ID]
+</pre>
+      </div>
+  </div>
+
+  <div id="content" class="container_12 clearfix">
+    <div class="grid_7">
+    <h3>
+        <b>Top <b class="stat">100</b> VimGolf Ninjas</b>
+        <span style="float:right">
+            <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-lang="en" data-related="igrigorik vimcasts learnvim" data-text="awesome VimGolf challenge: @" data-url="http://www.vimgolf.com/top" data-via="">Tweet</a>
+        </span>
+
+    </h3>
+
+        <div class="notice clearfix">
+            <img alt="Me-small_normal" class="user" src="http://a3.twimg.com/profile_images/1589579802/me-small_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>1</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Wei Dai</b> / <a href="/clvv42">@clvv42</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="T_e_normal" class="user" src="http://a3.twimg.com/profile_images/77597138/t_e_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>2</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Tim Chase</b> / <a href="/gumnos">@gumnos</a>
+            </h6>
+            <p style="margin-bottom:0">Christian geek; husband of a wonderful wife; father of a sweet son</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Jlove201003sq_normal" class="user" src="http://a1.twimg.com/profile_images/962969191/jlove201003sq_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>3</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Justin Love</b> / <a href="/wondible">@wondible</a>
+            </h6>
+            <p style="margin-bottom:0">Wonderful, terrible things.  Enjoy digging into problems and solving them with software.  Also involved in martial arts and a condo board.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="P1000007_normal" class="user" src="http://a3.twimg.com/profile_images/1269982709/P1000007_normal.JPG" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>4</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>h_east</b> / <a href="/h_east">@h_east</a>
+            </h6>
+            <p style="margin-bottom:0">ようすこ！／Embedded Software Engineer／I love Techno music( www.a-wave.com/system7 )／ctags／Vim／VimGolf／C／μITRON／linux(fedora)／tyrulist／Ruby／iPhone4／猫er／Perfume／筒井康隆</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Gintoki_normal" class="user" src="http://a0.twimg.com/profile_images/1653423126/gintoki_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>5</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>You-Siang Lin</b> / <a href="/yslinnctu">@yslinnctu</a>
+            </h6>
+            <p style="margin-bottom:0">
+</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Fepic_normal" class="user" src="http://a2.twimg.com/profile_images/200091560/fepic_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>6</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Federico Galassi</b> / <a href="/federicogalassi">@federicogalassi</a>
+            </h6>
+            <p style="margin-bottom:0">software craftsman</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Adept_normal" class="user" src="http://a1.twimg.com/profile_images/1203245033/adept_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>7</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Balkoth</b> / <a href="/_Balkoth_">@_Balkoth_</a>
+            </h6>
+            <p style="margin-bottom:0">e-nerd-geek, et dévoreur de livres.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Image_normal" class="user" src="http://a2.twimg.com/profile_images/1666537419/image_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>8</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Pete Johns</b> / <a href="/johnsyweb">@johnsyweb</a>
+            </h6>
+            <p style="margin-bottom:0">Based on a true story
+
+</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Eightbit-01595c8a-6e99-4383-abd1-f2ca6130cebc_normal" class="user" src="http://a2.twimg.com/profile_images/1281497577/eightbit-01595c8a-6e99-4383-abd1-f2ca6130cebc_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>9</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Hu Junfeng</b> / <a href="/hujunfeng">@hujunfeng</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="S3_normal" class="user" src="http://a1.twimg.com/profile_images/110632303/s3_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>10</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Stephen Morrow</b> / <a href="/yawmark">@yawmark</a>
+            </h6>
+            <p style="margin-bottom:0">Simplicity is the ultimate sophistication.
+-- Leonardo da Vinci</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_6_normal" class="user" src="http://a1.twimg.com/sticky/default_profile_images/default_profile_6_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>11</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>derp derp</b> / <a href="/derp__">@derp__</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="What_has_been_seen_normal" class="user" src="http://a1.twimg.com/profile_images/271403449/What_has_been_seen_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>12</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Oleg Roshupkin</b> / <a href="/jjjahson">@jjjahson</a>
+            </h6>
+            <p style="margin-bottom:0">vim me baby one more time</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Untitled_normal" class="user" src="http://a3.twimg.com/profile_images/1227029659/Untitled_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>13</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>vg</b> / <a href="/vimgolfer">@vimgolfer</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Image_normal" class="user" src="http://a2.twimg.com/profile_images/1716804138/image_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>14</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Pei-Lun Lee</b> / <a href="/ypcatw">@ypcatw</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="31177_1463840719038_1324108024_1274417_4706300_n_normal" class="user" src="http://a0.twimg.com/profile_images/1337351379/31177_1463840719038_1324108024_1274417_4706300_n_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>15</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ujjwol Lamichhane</b> / <a href="/Ujjwol">@Ujjwol</a>
+            </h6>
+            <p style="margin-bottom:0">॥ a संस्कृत, वेद, technology, Free, Open-source and Linux enthusiast. ॥ </p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="E55df1cc7d5fdb4ae9bc2afcb9afe7e4_normal" class="user" src="http://a3.twimg.com/profile_images/58642855/e55df1cc7d5fdb4ae9bc2afcb9afe7e4_normal.jpeg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>16</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>matthewd</b> / <a href="/_matthewd">@_matthewd</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Untitled_2_normal" class="user" src="http://a1.twimg.com/profile_images/1222043398/Untitled_2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>17</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b> Ikhsan Maulana</b> / <a href="/ixandidu">@ixandidu</a>
+            </h6>
+            <p style="margin-bottom:0">Sundanese Robotic Code Monkey - I love to build a simple, usable and fully tested apps.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Pi2_normal" class="user" src="http://a2.twimg.com/profile_images/643722706/pi2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>18</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Utkarsh Kukreti</b> / <a href="/utkarshkukreti">@utkarshkukreti</a>
+            </h6>
+            <p style="margin-bottom:0">Ruby on Rails Developer / WordPress Core Contributor and Entrepreneur</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_6_normal" class="user" src="http://a1.twimg.com/sticky/default_profile_images/default_profile_6_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>19</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>William Dunand</b> / <a href="/wdunand">@wdunand</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Avatar_normal" class="user" src="http://a2.twimg.com/profile_images/1456865759/avatar_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>20</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Xavier Nayrac</b> / <a href="/lkdjiin">@lkdjiin</a>
+            </h6>
+            <p style="margin-bottom:0">Développeur informatique
+Musicien</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Behnam-2010.01_normal" class="user" src="http://a2.twimg.com/profile_images/973204881/behnam-2010.01_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>21</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Behnam Esfahbod</b> / <a href="/zwnj">@zwnj</a>
+            </h6>
+            <p style="margin-bottom:0">FLOSS Developer and Designer</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="15012009068_web_normal" class="user" src="http://a0.twimg.com/profile_images/860719135/15012009068_web_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>22</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Emile Swarts</b> / <a href="/EmileSwarts">@EmileSwarts</a>
+            </h6>
+            <p style="margin-bottom:0">Developer, linux, vim, mutt, hiphop, sneakers, atheist, artist, anarchy</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Ava_normal" class="user" src="http://a3.twimg.com/profile_images/1503303536/ava_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>23</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Pasha Klets</b> / <a href="/p01nt">@p01nt</a>
+            </h6>
+            <p style="margin-bottom:0">Unix way, OpenIdiana, Debian, FreeBSD, MySQL, Cisco, Vim, RegExp, Ruby, high load / high available systems, load balancing</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Dom-50_normal" class="user" src="http://a1.twimg.com/profile_images/1204277933/dom-50_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>24</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>dominique pellé</b> / <a href="/vimgolfisto">@vimgolfisto</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Bunnies_normal" class="user" src="http://a3.twimg.com/profile_images/1325825204/Bunnies_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>25</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Trevor Powell</b> / <a href="/DoomedBunnies">@DoomedBunnies</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="6240_139454607906_723872906_3271730_5845230_n_normal" class="user" src="http://a0.twimg.com/profile_images/780435350/6240_139454607906_723872906_3271730_5845230_n_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>26</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Alain Gilbert</b> / <a href="/alain_gilbert">@alain_gilbert</a>
+            </h6>
+            <p style="margin-bottom:0">Student in computer science at Laval University. I do not have the cable, and I'll dominate the world before @JeanSebTr :)</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Face_icon_normal" class="user" src="http://a2.twimg.com/profile_images/1241352454/face_icon_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>27</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Akira Matsuda</b> / <a href="/a_matsuda">@a_matsuda</a>
+            </h6>
+            <p style="margin-bottom:0">Freelance Railer. Rails contributor. Ruby committer. amatsuda on GitHub.
+Lives in Asakusa, Tokyo. Founder of Asakusa.rb http://asakusa.rubyist.net 
+松田 明</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Photo_on_2010-07-30_at_17.36__2_normal" class="user" src="http://a0.twimg.com/profile_images/1115750604/Photo_on_2010-07-30_at_17.36__2_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>28</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Brad</b> / <a href="/bjjwillis">@bjjwillis</a>
+            </h6>
+            <p style="margin-bottom:0">My professional account - posts about programming and sysadmin.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Image_normal" class="user" src="http://a2.twimg.com/profile_images/1023305766/image_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>29</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Josh Weinberg</b> / <a href="/jcweinberg">@jcweinberg</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Pawprint_normal" class="user" src="http://a3.twimg.com/profile_images/52697867/pawprint_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>30</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Aaron Bull Schaefer</b> / <a href="/elasticdog">@elasticdog</a>
+            </h6>
+            <p style="margin-bottom:0">Certifiable renaissance man, gentleman, and scholar...it's rumored that I may someday rule the world</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Shiraseon3_normal" class="user" src="http://a2.twimg.com/profile_images/58909956/shiraseon3_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>31</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Douglas Stockwell</b> / <a href="/dstockwell">@dstockwell</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_2_normal" class="user" src="http://a1.twimg.com/sticky/default_profile_images/default_profile_2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>32</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ренат Акситов</b> / <a href="/Korvin79">@Korvin79</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="X_normal" class="user" src="http://a3.twimg.com/profile_images/1117314750/x_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>33</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>xhtmlforum</b> / <a href="/xhtmlforum">@xhtmlforum</a>
+            </h6>
+            <p style="margin-bottom:0">XHTMLforum - german (X)HTML / CSS community</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Andrey_ugolnik_180x180_normal" class="user" src="http://a3.twimg.com/profile_images/689098666/Andrey_Ugolnik_180x180_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>34</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Andrey A. Ugolnik</b> / <a href="/andreyugolnik">@andreyugolnik</a>
+            </h6>
+            <p style="margin-bottom:0">game developer</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_3_normal" class="user" src="http://a2.twimg.com/sticky/default_profile_images/default_profile_3_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>35</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Dave</b> / <a href="/zzdave13">@zzdave13</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Twitter_normal" class="user" src="http://a3.twimg.com/profile_images/404734665/twitter_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>36</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Austin Taylor</b> / <a href="/austintaylor">@austintaylor</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Depthmap_normal" class="user" src="http://a1.twimg.com/profile_images/1182740975/depthmap_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>37</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Paul King</b> / <a href="/nrocy">@nrocy</a>
+            </h6>
+            <p style="margin-bottom:0">Interested in far too many things to be particularly good at any one of them.. doesn't stop me trying, though.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_6_normal" class="user" src="http://a2.twimg.com/a/1292975674/images/default_profile_6_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>38</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Francisco Dibar</b> / <a href="/frandibar">@frandibar</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="South_park_384x384_normal" class="user" src="http://a0.twimg.com/profile_images/67030242/south_park_384x384_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>39</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Adam Pohorecki</b> / <a href="/apohorecki">@apohorecki</a>
+            </h6>
+            <p style="margin-bottom:0">Software Developer from Kraków, PL</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_1_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_1_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>40</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Andrey Ivanov</b> / <a href="/Bytamine">@Bytamine</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Ja_u_central_parku-mala_normal" class="user" src="http://a0.twimg.com/profile_images/887129908/ja_u_central_parku-mala_normal.JPG" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>41</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Dragan Cvetinovic</b> / <a href="/kawkafi">@kawkafi</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Dude2_normal" class="user" src="http://a3.twimg.com/profile_images/1347140916/dude2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>42</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Eivind Jahren</b> / <a href="/HaskellElephant">@HaskellElephant</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Avatar_normal" class="user" src="http://a2.twimg.com/profile_images/52805972/avatar_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>43</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ravil Bayramgalin</b> / <a href="/brainopia">@brainopia</a>
+            </h6>
+            <p style="margin-bottom:0">Addicted to ruby.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Img_3357_normal" class="user" src="http://a1.twimg.com/profile_images/1303626999/IMG_3357_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>44</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Terje Larsen</b> / <a href="/terlars">@terlars</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_1_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_1_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>45</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Sammasati</b> / <a href="/sammasati0">@sammasati0</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Railroad_to_sound_normal" class="user" src="http://a3.twimg.com/profile_images/1155474291/railroad_to_sound_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>46</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ricardo Mendes</b> / <a href="/locks">@locks</a>
+            </h6>
+            <p style="margin-bottom:0">Coder. Lover of Music (listening+playing(bass, chapman stick). Master Procrastinator.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="E_normal" class="user" src="http://a2.twimg.com/profile_images/46853902/e_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>47</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Vincent Isambart</b> / <a href="/vincentisambart">@vincentisambart</a>
+            </h6>
+            <p style="margin-bottom:0">A French Rubyist living in the land of the rising sun.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="2011-04-01_normal" class="user" src="http://a2.twimg.com/profile_images/1297408439/2011-04-01_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>48</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Stuart Gale</b> / <a href="/bishboria">@bishboria</a>
+            </h6>
+            <p style="margin-bottom:0">Aspiring software craftsman. Science &amp; Reason's errand boy.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Zaki_sq_normal" class="user" src="http://a1.twimg.com/profile_images/1653551540/zaki_sq_normal.JPG" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>49</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Dezső Zoltán</b> / <a href="/zakiazigazi">@zakiazigazi</a>
+            </h6>
+            <p style="margin-bottom:0">Virtual Worlds. Real Experience.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Foo-berk_normal" class="user" src="http://a1.twimg.com/profile_images/52629552/foo-berk_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>50</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>mightyfoo</b> / <a href="/mightyfoo">@mightyfoo</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="1309650785306_normal" class="user" src="http://a0.twimg.com/profile_images/1460145946/1309650785306_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>51</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Rob Ciaccio</b> / <a href="/RobertoCalavera">@RobertoCalavera</a>
+            </h6>
+            <p style="margin-bottom:0">guitar player, engineer, software/hardware junkie, and general tinkerer in the seattle area</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_5_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_5_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>52</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>p0ckets</b> / <a href="/p0ckets">@p0ckets</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Sun_normal" class="user" src="http://a1.twimg.com/profile_images/51587009/sun_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>53</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Leonard Chin [レオ]</b> / <a href="/lchin">@lchin</a>
+            </h6>
+            <p style="margin-bottom:0">a(us)bc in tokyo. http://t.l15n.com</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_4_normal" class="user" src="http://a0.twimg.com/a/1292975674/images/default_profile_4_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>54</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Aurélien Delahaye</b> / <a href="/alkove">@alkove</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Twitterprofilephoto_normal" class="user" src="http://a1.twimg.com/profile_images/536304858/twitterProfilePhoto_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>55</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ben Lenarts</b> / <a href="/benlenarts">@benlenarts</a>
+            </h6>
+            <p style="margin-bottom:0">all-round geek, focusing on iOS app design/programming at the moment</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Rabbit_128_normal" class="user" src="http://a2.twimg.com/profile_images/1192414495/rabbit_128_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>56</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>uuu</b> / <a href="/uu59">@uu59</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_2_normal" class="user" src="http://a2.twimg.com/a/1292975674/images/default_profile_2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>57</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Thomas Schönwälder</b> / <a href="/Masei1988">@Masei1988</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="45072b62-96bd-47e0-bb3a-83ec72a6e2af_normal" class="user" src="http://a0.twimg.com/profile_images/1179510204/45072b62-96bd-47e0-bb3a-83ec72a6e2af_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>58</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>aimee</b> / <a href="/sermoa">@sermoa</a>
+            </h6>
+            <p style="margin-bottom:0">a software crafter at @edendevelopment apprenticing to @ecomba. loves the web, coding, innovation, mobile technology, linux and google.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="2_normal" class="user" src="http://a0.twimg.com/profile_images/63787390/2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>59</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Henrik Nyh</b> / <a href="/henrik">@henrik</a>
+            </h6>
+            <p style="margin-bottom:0">Swedish web developer.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Daruma_normal" class="user" src="http://a1.twimg.com/profile_images/1195432264/daruma_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>60</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Fer Enaf</b> / <a href="/0x00C0FFEE">@0x00C0FFEE</a>
+            </h6>
+            <p style="margin-bottom:0">CS guy, geek, otaku, I love black humor, antijokes and serotonin agonists. I hunt for numbers stations. If you know any not in my list, please tell me about it.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Me_normal" class="user" src="http://a1.twimg.com/profile_images/612929355/me_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>61</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Jim Infield</b> / <a href="/jinfield">@jinfield</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Mugshotdog_normal" class="user" src="http://a0.twimg.com/profile_images/231104837/mugshotdog_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>62</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Henri Bourcereau</b> / <a href="/mmai">@mmai</a>
+            </h6>
+            <p style="margin-bottom:0">travailleur du web</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_1_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_1_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>63</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Tim Tsu</b> / <a href="/vimgolfpunk">@vimgolfpunk</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_3_normal" class="user" src="http://a3.twimg.com/a/1292975674/images/default_profile_3_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>64</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Mike Plotz</b> / <a href="/antisuji">@antisuji</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Foto_joost_normal" class="user" src="http://a1.twimg.com/profile_images/1189658582/foto_joost_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>65</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Joost</b> / <a href="/vlabakje">@vlabakje</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="N1577070005_30020373_9745_square_normal" class="user" src="http://a2.twimg.com/profile_images/598033226/n1577070005_30020373_9745_square_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>66</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Clint Tseng</b> / <a href="/dgtljunglist">@dgtljunglist</a>
+            </h6>
+            <p style="margin-bottom:0">Graphics/UX Designer • Software Engineer • ICTDer</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_1_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_1_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>67</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Toto l'haricot</b> / <a href="/nico_le_terribl">@nico_le_terribl</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Gravatar_normal" class="user" src="http://a0.twimg.com/profile_images/1240094309/gravatar_normal.jpeg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>68</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Jesús Espino</b> / <a href="/jespinog">@jespinog</a>
+            </h6>
+            <p style="margin-bottom:0">Apasionado del software libre.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_5_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_5_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>69</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Pierre</b> / <a href="/Pihour">@Pihour</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Ololo100x100_normal" class="user" src="http://a2.twimg.com/profile_images/1098200881/ololo100x100_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>70</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ilya Strukov</b> / <a href="/i1ey">@i1ey</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Avatar1_450x450_normal" class="user" src="http://a0.twimg.com/profile_images/96696508/avatar1_450x450_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>71</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Dmytro Shteflyuk</b> / <a href="/kpumuk">@kpumuk</a>
+            </h6>
+            <p style="margin-bottom:0">I'm a web developer who loves Ruby and Rails, Macs, and good TV shows. Currently working at Scribd (and very excited about it)</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Gravatar_normal" class="user" src="http://a0.twimg.com/profile_images/1204593539/gravatar_normal.jpeg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>72</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Asmund Liseth</b> / <a href="/Asmund_L">@Asmund_L</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_2_normal" class="user" src="http://a1.twimg.com/sticky/default_profile_images/default_profile_2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>73</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Jason Then</b> / <a href="/racc69">@racc69</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Alien_ff_normal" class="user" src="http://a3.twimg.com/profile_images/1529853012/alien_ff_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>74</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Kornél Lugosi</b> / <a href="/Coornail">@Coornail</a>
+            </h6>
+            <p style="margin-bottom:0">Information junkie, programmer. Intrested in Linux, Drupal, Android and anything Opensource.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Fotos-0259_normal" class="user" src="http://a1.twimg.com/profile_images/537230535/Fotos-0259_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>75</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>ls lahrs</b> / <a href="/lslah">@lslah</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_1_normal" class="user" src="http://a2.twimg.com/sticky/default_profile_images/default_profile_1_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>76</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Paweu1kZ nbNeyIhH</b> / <a href="/yUQlwsFpRSzxJFh">@yUQlwsFpRSzxJFh</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_3_normal" class="user" src="http://a3.twimg.com/a/1292975674/images/default_profile_3_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>77</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Guillaume Bonnoron</b> / <a href="/gbonnoron">@gbonnoron</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="A_normal" class="user" src="http://a3.twimg.com/profile_images/566057673/a_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>78</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Wesley Wong</b> / <a href="/wesleymwwong">@wesleymwwong</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Juan-headshot-1_normal" class="user" src="http://a0.twimg.com/profile_images/1387168821/Juan-headshot-1_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>79</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Juan C. Muller</b> / <a href="/juancmuller">@juancmuller</a>
+            </h6>
+            <p style="margin-bottom:0">Software developer, cyclist, cook, racquetball player.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Rti70_normal" class="user" src="http://a1.twimg.com/profile_images/747583832/rti70_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>80</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Peter Anselmo</b> / <a href="/peter_anselmo">@peter_anselmo</a>
+            </h6>
+            <p style="margin-bottom:0">I build websites.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Bogauss_48x48_normal_normal" class="user" src="http://a3.twimg.com/profile_images/1232772305/bogauss_48x48_normal_normal.gif" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>81</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Matthieu Honel</b> / <a href="/ocus">@ocus</a>
+            </h6>
+            <p style="margin-bottom:0">Simili geek. Ascendant filicophyte. Poilu des narines. | I made a post that ended on the 9gag hot-page once. http://9gag.com/gag/381378</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Mn_normal" class="user" src="http://a2.twimg.com/profile_images/131711487/MN_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>82</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Johan Sveholm</b> / <a href="/rymdtjuren">@rymdtjuren</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_0_normal" class="user" src="http://a3.twimg.com/sticky/default_profile_images/default_profile_0_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>83</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>vimja</b> / <a href="/vimja666">@vimja666</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Hoodie_normal" class="user" src="http://a3.twimg.com/profile_images/54727875/hoodie_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>84</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Simon Scarfe</b> / <a href="/simonscarfe">@simonscarfe</a>
+            </h6>
+            <p style="margin-bottom:0">Web developer located in North East England, also blathers on about BJJ and MMA</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Para.twitter.final_normal" class="user" src="http://a0.twimg.com/profile_images/1257590844/para.twitter.final_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>85</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>drio</b> / <a href="/drio">@drio</a>
+            </h6>
+            <p style="margin-bottom:0">Eternal UNIX enthusiast. Computer Engineer. Interested in software developement, data analysis, bigdata, visualization, genomics and personal medicine.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="122_normal" class="user" src="http://a1.twimg.com/profile_images/237879036/122_normal.gif" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>86</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>not so punk :]</b> / <a href="/notsopunk">@notsopunk</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Swingin_ds_normal" class="user" src="http://a3.twimg.com/profile_images/1108043550/swingin_ds_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>87</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Casey W Crites</b> / <a href="/caseycrites">@caseycrites</a>
+            </h6>
+            <p style="margin-bottom:0">I write bio's for a living. This really is some of my better work.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_3_normal" class="user" src="http://a2.twimg.com/sticky/default_profile_images/default_profile_3_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>88</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Thom Hughes</b> / <a href="/thom_hughes_1">@thom_hughes_1</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="08ed5cbe-a2d2-4503-9503-63d2236b1fba_normal" class="user" src="http://a2.twimg.com/profile_images/1069686760/08ed5cbe-a2d2-4503-9503-63d2236b1fba_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>89</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Soliman Sylvain</b> / <a href="/sylvain_soliman">@sylvain_soliman</a>
+            </h6>
+            <p style="margin-bottom:0">Computer Science researcher, Mac user, Linux sysadmin, cross-platform developper, go and BJ player, pop-rock listener...</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_6_normal" class="user" src="http://a2.twimg.com/a/1292975674/images/default_profile_6_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>90</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Benoit D</b> / <a href="/Anbcorp">@Anbcorp</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="36_normal" class="user" src="http://a0.twimg.com/profile_images/661431028/36_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>91</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>nicolas bo</b> / <a href="/thevegeta">@thevegeta</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Avatar_normal" class="user" src="http://a3.twimg.com/profile_images/790644167/avatar_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>92</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Tom Adams</b> / <a href="/holizz">@holizz</a>
+            </h6>
+            <p style="margin-bottom:0">WordPress wrangler at @dextrousweb. Resident git, vim, and general commandline guru. In love with @jerricurrl.</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_5_normal" class="user" src="http://a0.twimg.com/sticky/default_profile_images/default_profile_5_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>93</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Tara Bass</b> / <a href="/tara_bass">@tara_bass</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Final-fantasy-xiii.1291948_normal" class="user" src="http://a0.twimg.com/profile_images/1362371304/final-fantasy-xiii.1291948_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>94</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>kjrn</b> / <a href="/kjrnleto">@kjrnleto</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Me--subway_normal" class="user" src="http://a3.twimg.com/profile_images/25071182/me--subway_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>95</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Will Gray</b> / <a href="/graywh">@graywh</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Img_4019_normal" class="user" src="http://a0.twimg.com/profile_images/982437619/IMG_4019_normal.JPG" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>96</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Mikel Ward</b> / <a href="/mikelward">@mikelward</a>
+            </h6>
+            <p style="margin-bottom:0">Computer guy from Melbourne, Australia</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Oliver_normal" class="user" src="http://a0.twimg.com/profile_images/1258832432/oliver_normal.JPG" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>97</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>oliver mueller</b> / <a href="/marcontwit">@marcontwit</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="3703524221_e5e13b44cc_o_normal" class="user" src="http://a0.twimg.com/profile_images/644926832/3703524221_e5e13b44cc_o_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>98</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Ali Moeeny</b> / <a href="/alimoeeny">@alimoeeny</a>
+            </h6>
+            <p style="margin-bottom:0">I tweet about neurons, using neurons, being neurons. But I tweet for me don't follow me!</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Rp_logo_plain_normal" class="user" src="http://a0.twimg.com/profile_images/1169547451/rp_logo_plain_normal.jpg" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>99</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>Kevin Webster</b> / <a href="/rabidpraxis">@rabidpraxis</a>
+            </h6>
+            <p style="margin-bottom:0">Internet pseudonym of @webster_kevin toiling about design, interfaces, and development</p>
+        </div>
+        <div class="notice clearfix">
+            <img alt="Default_profile_2_normal" class="user" src="http://a1.twimg.com/sticky/default_profile_images/default_profile_2_normal.png" />
+            <div style="float:right; text-align:center;font-size:2.4em;margin-left:1em"><b>100</b></div>
+
+            <h6 style="margin-bottom:0">
+                <b>David</b> / <a href="/dpa_92">@dpa_92</a>
+            </h6>
+            <p style="margin-bottom:0"></p>
+        </div>
+
+</div>
+
+<div class="grid_5">
+    <h4 style="margin-top:0.5em">Leaderboard rules:</h4>
+    <ul>
+        <li>Global rank is the sum of your ranks on each challenge</li>
+        <li>Skipping a challenge implicitly yields the lowest rank</li>
+    </ul>
+
+    <p>To climb the global ladder, you need to climb the individual ladders of each challenge. The more challenges you complete, and the higher you place on each, the higher your global rank will be. If you skip a challenge, then it's equivalent to placing last in that challenge.</p>
+
+    <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'vimgolf',
+  interval: 6000,
+  title: '',
+  subject: '',
+  width: 380,
+  height: 500,
+  theme: {
+    shell: {
+      background: '#8ec1da',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#1985b5'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    toptweets: true,
+    behavior: 'default'
+  }
+}).render().start();
+</script>
+</div>
+  </div>
+
+  <div id="footer" class="container_12 clearfix">
+    <div id="copy">
+        <a href="/top">Leaderboard</a>, &nbsp;&nbsp;
+        <a href="/about">Changelog, Rules &amp; FAQ</a>, &nbsp;&nbsp;
+        CLI Version: <b><a href="https://github.com/igrigorik/vimgolf">0.3.0</a></b>, &nbsp;&nbsp;
+        Author: <a href="http://www.igvita.com">Ilya Grigorik</a> / <a href="http://twitter.com/igrigorik">@igrigorik</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+  <script type="text/javascript">
+  try {
+  reinvigorate.url_filter = function (url) { return url; }
+  reinvigorate.track("s23fg-3p272cp9w0");
+  } catch(err) {}
+  </script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-71196-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>

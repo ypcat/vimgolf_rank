@@ -1,0 +1,391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+  <meta http-equiv="Cache-control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <title>VimGolf - real Vim ninjas count every keystroke!</title>
+
+  <link href="/stylesheets/960.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/all.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/forms.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/jquery-ui-1.8.6.custom.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/prettify.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/reset.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/scaffold.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/screen.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/site.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/syntax.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/text.css?1311900365" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="/javascripts/prettify/prettify.js?1311900365" type="text/javascript"></script>
+  <script src="/javascripts/jquery.min.js?1311900365" type="text/javascript"></script>
+  <script src="/javascripts/jquery-ui.min.js?1311900365" type="text/javascript"></script>
+  <script src="/javascripts/application.js?1311900365" type="text/javascript"></script>
+
+  <link href="http://feeds.vimgolf.com/latest-challenges" rel="alternate" title="Latest VimGolf challenges" type="application/rss+xml" />
+
+  <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="GEL8+5sl/rH3DFSHdE+BG7IdXC0j4sKHgnS4PxQ+ps0="/>
+</head>
+
+<body onload="prettyPrint()">
+  <div id="header" class="container_12 clearfix">
+    <div id="logo">
+      <div><a href="/"><img src="/images/vim_golf_logo.png"> VimGolf</a></div>
+    </div>
+    <div id="navigation">
+      <ul id="nav">
+            <li><a href="/auth/twitter">Sign in with Twitter</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="about" class="container_12 clearfix">
+      <div id="about" class="grid_7">
+        <h3 style="margin:0.5em 0 0.5em 0">Real Vim ninjas count <b>every</b> keystroke - do you?</h3>
+        <h6>Pick a challenge, fire up Vim, and show us what you got.</h6>
+        <p><b><a href="/top">Leaderboard</a></b>, <a href="/about">Changelog, Rules &amp; FAQ</a>, updates: <a href="http://twitter.com/vimgolf">@vimgolf</a>, <a href="http://feeds.vimgolf.com/latest-challenges">RSS</a>.</p>
+      </div>
+      <div id="instructions" class="grid_5">
+<pre class="terminal">
+<span class="shell">Your VimGolf key: <a href="/auth/twitter">please sign in</a></span>
+
+<span class="shell">$</span> gem install vimgolf
+<span class="shell">$</span> vimgolf setup
+<span class="shell">$</span> vimgolf put [challenge ID]
+</pre>
+      </div>
+  </div>
+
+  <div id="content" class="container_12 clearfix">
+    <div class="grid_7">
+    <h3><b>Top Entries</b></h3>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d28637c4bcd032f1c00003d">Reformat long lines</a> -
+                Rank: <b class="stat">1/215</b>,
+                Score: <b>15</b>
+            </h5>
+            <p>Rearrange this ruby method call to put each parameter on its own line. Could become a useful macro.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d29ae2107e0177c7e000036">Before there was Farmville...</a> -
+                Rank: <b class="stat">7/53</b>,
+                Score: <b>206</b>
+            </h5>
+            <p>There was old MacDonald.  For my toddler.  The first Vim sing-a-long?
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1e29fda93ce03311000066">Ruby 1.9 hashes</a> -
+                Rank: <b class="stat">12/499</b>,
+                Score: <b>12</b>
+            </h5>
+            <p>Rubyists talk about being cutting edge but how many are using 1.9 in production? Time to convert those verbose 1.8 hashes in to symbolic, succinct 1.9 beauties!
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d39030bafc67a0f8c000076">categorize the shopping list</a> -
+                Rank: <b class="stat">18/49</b>,
+                Score: <b>279</b>
+            </h5>
+            <p>Going to the store with an unorganized shopping list is like programming with Notepad.  Help the shopper efficiently navigate the aisles to avoid unnecessary footsteps.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d22bb117f75b01e070000fb">Cartesian product</a> -
+                Rank: <b class="stat">21/139</b>,
+                Score: <b>32</b>
+            </h5>
+            <p>{1,2,3,4,5} X {1,2,3,4,5}
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d22dcfa7f75b01e0700010e">Getters &amp; Setters: Java</a> -
+                Rank: <b class="stat">23/87</b>,
+                Score: <b>127</b>
+            </h5>
+            <p>Boilerplate getters &amp; setters - it's a tedious fact of life in Java, and probably the only thing that still pulls me back to an IDE. Perhaps someone knows a fast, pure vim way...
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d28aef94bcd032f1c0000dc">The Universal Declaration of Human Rights, Article 1</a> -
+                Rank: <b class="stat">27/105</b>,
+                Score: <b>26</b>
+            </h5>
+            <p>Somebody's got this slightly muddled up. See how quickly you can fix it.
+
+(I made this to experiment with buffers. I'm not actually sure whether this is faster with buffers or without.)
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d2f0fe063b08b08b0000019">Promote that perl 'one-liner' ...</a> -
+                Rank: <b class="stat">30/96</b>,
+                Score: <b>114</b>
+            </h5>
+            <p>You've just sorted your data using perl -e, when suddenly you have to add a row and do it again.
+
+That's twice - you'll almost certainly do it again. Time to turn it into a real script.
+
+We'll start from having pasted it in ...
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d34af20e747f561b3000081">Rotating Philosophers Problem</a> -
+                Rank: <b class="stat">30/260</b>,
+                Score: <b>30</b>
+            </h5>
+            <p>Can you help the philosophers find a good place to sit before they get five forks and spaghetti?
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d2478e20947c63e2600009c">Insert a Markdown link</a> -
+                Rank: <b class="stat">31/273</b>,
+                Score: <b>24</b>
+            </h5>
+            <p>Put a link in a markdown document, using the after-the-paragraph format.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1ed78425ba287b2a000227">CSV to JSON</a> -
+                Rank: <b class="stat">31/107</b>,
+                Score: <b>145</b>
+            </h5>
+            <p>A search for shortest vimissh way to convert CSV to JSON.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a6ed2b8cb3409320000c9">Add fold markers to a .c file</a> -
+                Rank: <b class="stat">32/208</b>,
+                Score: <b>34</b>
+            </h5>
+            <p>Fold markers can make it easier to navigate source code. Add them to this .c file.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1ac1800a045132c0000011">Reformat a C golf submission</a> -
+                Rank: <b class="stat">35/269</b>,
+                Score: <b>28</b>
+            </h5>
+            <p>Take this C golf submission (for the &quot;tiny but standards-compliant Hello World program&quot; category, naturally), and turn it into formatted C code.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1e93e825ba287b2a0000ed">The holy-grail may help</a> -
+                Rank: <b class="stat">42/205</b>,
+                Score: <b>16</b>
+            </h5>
+            <p>Can you find it in less than 20 strokes, Arthur?  
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d42cde1e6dc010cb7000024">expand a list comprehension (python)</a> -
+                Rank: <b class="stat">43/158</b>,
+                Score: <b>59</b>
+            </h5>
+            <p>Please show your way to convert a list comprehension in python to an ordinary for-loop expression!
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a4f2ba860b744720000bf">Flodder-challenge</a> -
+                Rank: <b class="stat">47/316</b>,
+                Score: <b>35</b>
+            </h5>
+            <p>Replace the text the most efficient and win!
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1e037dde2f897c2a000417">Reverse and count</a> -
+                Rank: <b class="stat">47/316</b>,
+                Score: <b>25</b>
+            </h5>
+            <p>Someone typed things upside down and now a Vim ninja needs to reverse the lines and count how many there are.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1aaf2fb11838287d000036">Reverse characters in a line</a> -
+                Rank: <b class="stat">47/432</b>,
+                Score: <b>8</b>
+            </h5>
+            <p>You have everything you need, just not in the right order.  Mastermind would give you 26 white pegs.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a5275a860b74472000110">Sort and add attributes</a> -
+                Rank: <b class="stat">48/563</b>,
+                Score: <b>33</b>
+            </h5>
+            <p>Sort the states and add the attribute country to each record.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d4ab047795d626036000034">imports alignment (python)</a> -
+                Rank: <b class="stat">53/278</b>,
+                Score: <b>23</b>
+            </h5>
+            <p>Align as one import per line.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d3c51f1aabf526ed6000030">HTML to Haml</a> -
+                Rank: <b class="stat">55/394</b>,
+                Score: <b>40</b>
+            </h5>
+            <p>Help convert this HTML page to Haml.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a6a8eb8cb34093200007a">Reconstruct the Sentence</a> -
+                Rank: <b class="stat">65/476</b>,
+                Score: <b>21</b>
+            </h5>
+            <p>Get the sentence back in the proper order, remove duplicate lines, and then combine the separate lines into one.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d2c9d06eda6262e4e00007a">Assignment Alignment</a> -
+                Rank: <b class="stat">67/376</b>,
+                Score: <b>29</b>
+            </h5>
+            <p>line up the operators. Use spaces, not tabs.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d2302587f75b01e0700013f">Do you have a big gun?</a> -
+                Rank: <b class="stat">76/147</b>,
+                Score: <b>5</b>
+            </h5>
+            <p>Of course I have.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a8bf2b8cb3409320002c4">Search and Replace 0</a> -
+                Rank: <b class="stat">90/1174</b>,
+                Score: <b>12</b>
+            </h5>
+            <p>Replace every instance of 'aaa' with 'xaaax'.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1e634e509d6e19d8000081">Shebangs for all</a> -
+                Rank: <b class="stat">93/541</b>,
+                Score: <b>15</b>
+            </h5>
+            <p>We've all seen or used a shebang once or twice. Ditch the specific paths and leave just a dynamic Ruby and Python bath behind.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a4d82a860b7447200008d">Whitespace, empty lines and tabs</a> -
+                Rank: <b class="stat">96/787</b>,
+                Score: <b>24</b>
+            </h5>
+            <p>Convert tabs to spaces, strip empty lines and trailing whitespace.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a522ea860b7447200010b">Braces or Brackets?</a> -
+                Rank: <b class="stat">104/316</b>,
+                Score: <b>52</b>
+            </h5>
+            <p>Someone forgot whether to use braces or brackets and you have to clean up their code!
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a71b5b8cb340932000109">Change the content of a string</a> -
+                Rank: <b class="stat">116/519</b>,
+                Score: <b>25</b>
+            </h5>
+            <p>This docstring is a complete lie. Fix it.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1c1a3cf655cd081000000d">A Simple One</a> -
+                Rank: <b class="stat">129/509</b>,
+                Score: <b>9</b>
+            </h5>
+            <p>Here is a very simple one - just to illustrate/introduce a vim feature that some people seem to miss...
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d20618bf1a3f252f4000086">Reverse a single line</a> -
+                Rank: <b class="stat">166/470</b>,
+                Score: <b>21</b>
+            </h5>
+            <p>Reverse a single line vertically.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a1c36567bac34a9000002">Reformat/Refactor a Golfer Class</a> -
+                Rank: <b class="stat">188/1642</b>,
+                Score: <b>39</b>
+            </h5>
+            <p>A simple case of removing unneeded code and fixing broken indentation.
+        </div>
+        <div>
+            <h5 class="challenge">
+                <a href="/challenges/4d1a34ccfa85f32065000004">Simple text editing with Vim</a> -
+                Rank: <b class="stat">269/2144</b>,
+                Score: <b>16</b>
+            </h5>
+            <p>Make the pairs of lines match up by making each second line same as first
+        </div>
+
+        <h3><b>Contributed Challenges</b></h3>
+            <div>
+    <h5 class="challenge">
+        <a href="/challenges/4d39030bafc67a0f8c000076">categorize the shopping list</a> - 49 entries
+    </h5>
+    <p>Going to the store with an unorganized shopping list is like programming with Notepad.  Help the shopper efficiently navigate the aisles to avoid unnecessary footsteps.
+</div>
+
+</div>
+
+<div class="grid_5">
+    <div class="notice clearfix">
+        <img alt="1309650785306_normal" class="user" src="http://a0.twimg.com/profile_images/1460145946/1309650785306_normal.jpg" />
+
+        <h6 style="margin-bottom:0">
+            <b>Rob Ciaccio</b><br/>Twitter: <a href='http://www.twitter.com/RobertoCalavera' class='twitter-link' target='_new'>@RobertoCalavera</a>
+        </h6>
+        <p style="margin-bottom:0"><em>guitar player, engineer, software/hardware junkie, and general tinkerer in the seattle area</em></p>
+    </div>
+
+    <h2 style="padding:0em;margin:1em 1.5em 0.5em 1.5em">entered into <b class="stat">33</b> challenges</h2>
+    <h2 style="padding:0em;margin:0.5em 1.5em">contributed <b class="stat">1</b> challenges</h2>
+</div>
+  </div>
+
+  <div id="footer" class="container_12 clearfix">
+    <div id="copy">
+        <a href="/top">Leaderboard</a>, &nbsp;&nbsp;
+        <a href="/about">Changelog, Rules &amp; FAQ</a>, &nbsp;&nbsp;
+        CLI Version: <b><a href="https://github.com/igrigorik/vimgolf">0.3.0</a></b>, &nbsp;&nbsp;
+        Author: <a href="http://www.igvita.com">Ilya Grigorik</a> / <a href="http://twitter.com/igrigorik">@igrigorik</a>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+  <script type="text/javascript">
+  try {
+  reinvigorate.url_filter = function (url) { return url; }
+  reinvigorate.track("s23fg-3p272cp9w0");
+  } catch(err) {}
+  </script>
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-71196-5']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</body>
+</html>
