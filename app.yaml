@@ -8,4 +8,5 @@ handlers:
   script: update_golfer.py
 
 - url: /.*
-  script: app.py
+  script: index.py
+
