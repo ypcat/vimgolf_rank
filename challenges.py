@@ -10,8 +10,8 @@ from model import Challenge, Game
 from util import fetch
 
 class challenges:
-    def GET(self, name):
-        return 'challenges', name
+    def GET(self, handle):
+        return 'challenges', handle
     def POST(self):
         i = web.input()
         update_challenge(i.handle)
