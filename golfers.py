@@ -1,6 +1,6 @@
 import web
 
 class golfers:
-    def GET(self, name):
-        return 'golfers', name
+    def GET(self, handle):
+        return 'golfers', handle
 

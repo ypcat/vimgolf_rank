@@ -1,8 +1,6 @@
 import web
 
 class challenges:
-    def GET(self, name):
-        return 'challenges', name
-
-app = web.application(('/(.*)', 'challenges'), globals())
+    def GET(self, handle):
+        return 'challenges', handle
 
