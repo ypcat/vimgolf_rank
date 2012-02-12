@@ -21,7 +21,9 @@ def update_challenges():
     """fetch challenge list from vimgolf and update datastore."""
     logging.info('update_challenges()')
 
-    for row in BeautifulSoup(fetch('/')).findAll('h5')[:5]: # process only first 5 for testing
+    # XXX limit to process first 5 items for testing
+    #     take out the [:5] in the next line before deploy
+    for row in BeautifulSoup(fetch('/')).findAll('h5')[:5]:
         handle = row.a['href'].split('/')[-1]
         taskqueue.add(url='/challenges/'+handle)
 
