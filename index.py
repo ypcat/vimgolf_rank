@@ -12,7 +12,7 @@ from util import fetch
 from top import top
 from challenges import challenges
 from golfers import golfers
-#from model import Challenge, Game
+from model import Challenge
 
 urls = (
     '/?', 'index',
@@ -24,11 +24,24 @@ urls = (
 
 class index:
     def GET(self):
-        return 'index'
+        d = {'table':challenge_table(Challenge.all())}
+        return '%(table)s' % d
     def POST(self):
         """Update all challenges"""
         taskqueue.add(url='/challenges')
         raise web.seeother('/')
+
+def challenge_table(clist):
+    """Returns HTML table for challenges"""
+    clist = sorted(clist, key=lambda c: len(c.active_golfers), reverse=1)
+    d = {'tbody':'\n'.join(challenge_row(c) for c in clist)}
+    return '<div>%(tbody)s</div>' % d
+
+def challenge_row(c):
+    """Return a table row representing challenge"""
+    d = {'link':'<a href="challenges/%s">%s</a>' % (c.handle, c.title),
+         'active':'%d active golfers' % len(c.active_golfers)}
+    return '<div>%(link)s - %(active)s</div>' % d
 
 #def update_challenge_list():
 #    """fetch challenge list from vimgolf and update datastore."""
