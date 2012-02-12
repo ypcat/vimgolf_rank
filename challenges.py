@@ -10,7 +10,22 @@ from util import fetch
 
 class challenges:
     def GET(self, handle=None):
-        return 'challenges', handle
+        if not handle:
+            raise web.seeother('/')
+        c = Challenge.get_by_key_name(handle)
+        logging.info(c.active_golfers)
+        row = lambda i, g: '<div>#%(rank)d - <a href="/%(id)s">%(id)s</a></div>' % {'rank':i+1, 'id':g}
+        leaderboard = lambda c: '\n'.join(row(i,g) for i,g in enumerate(c.active_golfers))
+        d = {'title':c.title,
+             'link':'http://vimgolf.com/challenges/'+c.handle,
+             'body':leaderboard(c)}
+        return '''
+        <a href="%(link)s"><h3><b>%(title)s</b></h3></a>
+        <div>
+        <h5>Leaderboard</h5>
+        %(body)s
+        </div>
+        ''' % d
     def POST(self, handle=None):
         if handle:
             update_challenge(handle)
