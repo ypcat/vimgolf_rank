@@ -20,10 +20,10 @@ class challenges:
              'link':'http://vimgolf.com/challenges/'+c.handle,
              'body':leaderboard(c)}
         return '''
-        <a href="%(link)s"><h3><b>%(title)s</b></h3></a>
+        <h3><a href="%(link)s"><b>%(title)s</b></a></h3>
         <div>
-        <h5>Leaderboard</h5>
-        %(body)s
+            <h5>Leaderboard</h5>
+            %(body)s
         </div>
         ''' % d
     def POST(self, handle=None):
