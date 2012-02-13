@@ -4,8 +4,14 @@ runtime: python
 api_version: 1
 
 handlers:
-- url: /update_golfer
-  script: update_golfer.py
+#- url: /update_golfer
+#  script: update_golfer.py
+
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
 
 - url: /.*
   script: index.py

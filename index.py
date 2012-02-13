@@ -27,16 +27,8 @@ class index:
         clist = sorted(Challenge.all(),
                        key=lambda c: len(c.active_golfers),
                        reverse=1)
-        link = lambda c:'<a href="challenges/%s">%s</a>' % (c.handle, c.title)
-        active = lambda c:'%d active golfers' % len(c.active_golfers)
-        row = lambda c: '<div>%s - %s</div>' % (link(c), active(c))
-        d = {'body':'\n'.join(row(c) for c in clist)}
-        return '''
-        <h3><b>Open VimGolf Challenges</b></h3>
-        <h4><a href="/top">Leaderboard</a></h4>
-        <div>
-            %(body)s
-        </div>''' % d
+        render = web.template.render('templates')
+        return render.index(clist)
     def POST(self):
         """Update all challenges"""
         taskqueue.add(url='/challenges')

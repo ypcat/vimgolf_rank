@@ -1,0 +1,34 @@
+$def with (challenges)
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>VimGolf Ranking</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body id="home">
+
+    <header>
+        <h3><b>Open VimGolf Challenges</b></h3>
+    </header>
+
+    <section>
+        <h4><a href="/top">Leaderboard</a></h4>
+        <div>
+        $for c in challenges:
+            <div>
+                <a href="challenges/${c.handle}">${c.title}</a>
+                - ${len(c.active_golfers)} active golfers
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+
+</html>
+
