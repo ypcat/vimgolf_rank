@@ -1,0 +1,31 @@
+$def with (challenge)
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>VimGolf Ranking</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+
+<body id="home">
+
+    <header>
+        <h3><a href="http://vimgolf.com/challenges/${challenge.handle}"><b>${challenge.title}</b></a></h3>
+    </header>
+
+    <section>
+        <h5>Leaderboard</h5>
+        <div>
+        $for golfer in challenge.active_golfers:
+            <div>#${loop.index} - <a href="/$golfer">$golfer</a></div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+
+</html>
+

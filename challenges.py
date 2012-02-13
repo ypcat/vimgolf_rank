@@ -9,31 +9,20 @@ from model import Challenge
 from util import fetch
 
 class challenges:
-    def GET(self, handle=None):
-        if not handle:
+    def GET(self, handle=''):
+        challenge = Challenge.get_by_key_name(handle)
+        if not challenge:
             raise web.seeother('/')
-        c = Challenge.get_by_key_name(handle)
-        logging.info(c.active_golfers)
-        row = lambda i, g: '<div>#%(rank)d - <a href="/%(id)s">%(id)s</a></div>' % {'rank':i+1, 'id':g}
-        leaderboard = lambda c: '\n'.join(row(i,g) for i,g in enumerate(c.active_golfers))
-        d = {'title':c.title,
-             'link':'http://vimgolf.com/challenges/'+c.handle,
-             'body':leaderboard(c)}
-        return '''
-        <h3><a href="%(link)s"><b>%(title)s</b></a></h3>
-        <div>
-            <h5>Leaderboard</h5>
-            %(body)s
-        </div>
-        ''' % d
-    def POST(self, handle=None):
+        render = web.template.render('templates')
+        return render.challenges(challenge)
+    def POST(self, handle=''):
         if handle:
             update_challenge(handle)
         else:
             update_challenges()
 
 def update_challenges():
-    """fetch challenge list from vimgolf and update datastore."""
+    """Fetch challenge list from vimgolf and update datastore."""
     logging.info('update_challenges()')
 
     # XXX limit to process first 5 items for testing
@@ -43,7 +32,7 @@ def update_challenges():
         taskqueue.add(url='/challenges/'+handle)
 
 def update_challenge(handle):
-    """fetch Leaderboard and active golfers of the specified challenge, and update datastore."""
+    """Fetch Leaderboard and active golfers of the specified challenge, and update datastore."""
     logging.info('update_challenge(%s)' % handle)
 
     soup = BeautifulSoup(fetch('challenges/' + handle))
