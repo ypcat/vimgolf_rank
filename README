@@ -2,3 +2,9 @@ type
 # make templates
 to compile static html templates for web.py
 
+type
+# make update-local # update for deployed app
+to update database
+
+in dev_server, set feed_url var of js/vimgolf_rank.user.js to match the env
+
