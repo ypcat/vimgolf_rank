@@ -7,15 +7,16 @@ import web
 #local
 from model import Challenge
 from util import fetch
+from util import increment
 
 class challenges:
-    def GET(self, handle=''):
-        challenge = Challenge.get_by_key_name(handle)
+    def GET(self, handle=None):
+        challenge = Challenge.get_by_key_name(str(handle))
         if not challenge:
             raise web.seeother('/')
         render = web.template.render('templates')
         return render.challenges(challenge)
-    def POST(self, handle=''):
+    def POST(self, handle=None):
         if handle:
             update_challenge(handle)
         else:
@@ -27,7 +28,10 @@ def update_challenges():
 
     # XXX limit to process first 5 items for testing
     #     take out the [:5] in the next line before deploy
-    for row in BeautifulSoup(fetch('/')).findAll('h5')[:5]:
+    rows = BeautifulSoup(fetch('/')).findAll('h5')[:5]
+    count = increment('challenge_tasks', len(rows))
+    logging.info('init challenge_tasks = %d' % count)
+    for row in rows:
         handle = row.a['href'].split('/')[-1]
         taskqueue.add(url='/challenges/'+handle)
 
@@ -41,6 +45,11 @@ def update_challenge(handle):
     record = Challenge(key_name=handle, handle=handle, title=title, active_golfers=golfers)
     record.put()
     logging.info('updated Challenge(%s, %s) with %d golfers' % (handle, title, len(golfers)))
+
+    count = increment('challenge_tasks', -1)
+    logging.info('challenge_tasks = %d' % count)
+    if count == 0:
+        taskqueue.add(url='/top')
 
 #def update_challenge(handle):
 #    """fetch Leaderboard and active golfers of the specified challenge, and update datastore."""

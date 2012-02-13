@@ -13,6 +13,9 @@ class Golfer(db.Model):
     global_rank    = db.IntegerProperty()    # sum of ranks of all challenges
     rank           = db.IntegerProperty()
 
+class Counter(db.Model):
+    count          = db.IntegerProperty()
+
 #class Game(db.Model):
 #    """Data model for a game."""
 #    golfer         = db.StringProperty()
