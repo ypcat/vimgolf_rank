@@ -8,10 +8,11 @@ from google.appengine.api import taskqueue
 from BeautifulSoup import BeautifulSoup
 import web
 #local
-from util import fetch
+#from util import fetch
 from top import top
 from challenges import challenges
 from golfers import golfers
+from feed import feed
 from model import Challenge
 
 urls = (
@@ -19,6 +20,7 @@ urls = (
     '/top/?', 'top',
     '/challenges/?', 'challenges',
     '/challenges/(.*)', 'challenges',
+    '/json/(.*)', 'feed',
     '/(.*)', 'golfers.golfers',
 )
 

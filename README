@@ -1,0 +1,4 @@
+type
+# make templates
+to compile static html templates for web.py
+
