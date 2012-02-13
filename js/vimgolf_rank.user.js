@@ -6,6 +6,7 @@
 // @require        http://code.jquery.com/jquery.min.js
 // ==/UserScript==
 
+//XXX use first one for deploy
 //var feed_url = "http://vimgolf-rank.appspot.com/json";
 var feed_url = "http://localhost:8080/json";
 
