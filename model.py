@@ -1,15 +1,15 @@
 from google.appengine.ext import db
 
 class Challenge(db.Model):
-    handle         = db.StringProperty()     # challenge id, 24 letters
-    title          = db.StringProperty()
-    active_golfers = db.StringListProperty() # list of golfer handles
+    handle         = db.StringProperty(indexed=False)     # challenge id, 24 letters
+    title          = db.StringProperty(indexed=False)
+    active_golfers = db.StringListProperty(indexed=False) # list of golfer handles
 
 class Golfer(db.Model):
-    handle         = db.StringProperty()
-    global_rank    = db.IntegerProperty()    # sum of ranks of all challenges
-    rank           = db.IntegerProperty()
+    handle         = db.StringProperty(indexed=False)
+    global_rank    = db.IntegerProperty(indexed=False)    # sum of ranks of all challenges
+    rank           = db.IntegerProperty(indexed=False)
 
 class Counter(db.Model):
-    count          = db.IntegerProperty()
+    count          = db.IntegerProperty(indexed=False)
 

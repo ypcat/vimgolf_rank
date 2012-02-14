@@ -4,11 +4,12 @@
 // @include        http://vimgolf.com/*
 // @include        http://www.vimgolf.com/*
 // @require        http://code.jquery.com/jquery.min.js
+// @version        0.0.1
 // ==/UserScript==
 
 //XXX use first one for deploy
-//var feed_url = "http://vimgolf-rank.appspot.com/json";
-var feed_url = "http://localhost:8080/json";
+var feed_url = "http://vimgolf-rank.appspot.com/json";
+//var feed_url = "http://localhost:8080/json";
 
 if(window.location.pathname == '/'){
     GM_xmlhttpRequest({

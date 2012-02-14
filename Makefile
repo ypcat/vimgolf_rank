@@ -1,4 +1,4 @@
-.PHONY: templates clean update update-local
+.PHONY: templates clean update update-local deploy
 
 templates/__init__.py: templates/*.html
 	python web/template.py --compile templates
@@ -13,4 +13,7 @@ update:
 
 update-local:
 	curl -d '' http://localhost:8080
+
+deploy:
+	appcfg.py update .
 
