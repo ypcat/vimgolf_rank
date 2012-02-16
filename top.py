@@ -1,11 +1,20 @@
 import logging
 import web
+#gae
+from google.appengine.api import taskqueue, memcache
+#local
 from model import Challenge
 from model import Golfer
 
 class top:
     def GET(self):
-        return 'top'
+        glist = memcache.get('glist')
+        if glist is None:
+            glist = sorted(Golfer.all(),
+                       key=lambda g: g.rank)
+            memcache.set("glist", glist);
+        render = web.template.render('templates')
+        return render.golfers(glist)
     def POST(self):
         """Update Golfer table from Challenge data."""
         logging.info('top()')

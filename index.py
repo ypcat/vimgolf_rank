@@ -1,7 +1,7 @@
 #std
 import logging
 #gae
-from google.appengine.api import taskqueue
+from google.appengine.api import taskqueue, memcache
 #3rd
 from BeautifulSoup import BeautifulSoup
 import web
@@ -23,9 +23,12 @@ urls = (
 
 class index:
     def GET(self):
-        clist = sorted(Challenge.all(),
+        clist = memcache.get('clist')
+        if clist is None:
+            clist = sorted(Challenge.all(),
                        key=lambda c: len(c.active_golfers),
                        reverse=1)
+            memcache.set("clist", clist);
         render = web.template.render('templates')
         return render.index(clist)
     def POST(self):
