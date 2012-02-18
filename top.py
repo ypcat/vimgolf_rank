@@ -1,11 +1,20 @@
 import logging
 import web
+#gae
+from google.appengine.api import taskqueue, memcache
+#local
 from model import Challenge
 from model import Golfer
 
 class top:
     def GET(self):
-        return 'top'
+        glist = memcache.get('glist')
+        if glist is None:
+            glist = sorted(Golfer.all(),
+                       key=lambda g: g.rank)
+            memcache.set("glist", glist);
+        render = web.template.render('templates')
+        return render.golfers(glist)
     def POST(self):
         """Update Golfer table from Challenge data."""
         logging.info('top()')
@@ -13,7 +22,7 @@ class top:
         logging.info('gathering active golfers')
         handles = set(h for c in challenges for h in c.active_golfers)
         ranksum = sum(len(c.active_golfers) for c in challenges)
-        golfers = dict((h, Golfer(key_name=h, handle=h, global_rank=ranksum))
+        golfers = dict((h, Golfer(key_name='@'+h, handle=h, global_rank=ranksum))
                        for h in handles)
         logging.info('global rank sum %d' % ranksum)
         logging.info('calculating global rank for each golfer')
