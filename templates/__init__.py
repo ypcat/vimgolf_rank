@@ -39,7 +39,7 @@ def challenges (challenge):
 
     return self
 
-challenges = CompiledTemplate(challenges, 'templates/challenges.html')
+challenges = CompiledTemplate(challenges, 'templates\\challenges.html')
 join_ = challenges._join; escape_ = challenges._escape
 
 # coding: utf-8
@@ -67,7 +67,7 @@ def golfers (golfers):
     extend_([u'        <div>\n'])
     for g in loop.setup(golfers):
         extend_(['        ', u'<div>\n'])
-        extend_(['        ', u'    ', escape_((g.handle), True), u' ', escape_((g.rank), True), u' ', escape_((g.global_rank), True), u'\n'])
+        extend_(['        ', u'    <span>', escape_((g.handle), True), u'</span> <span>', escape_((g.global_rank), True), u'</span>\n'])
         extend_(['        ', u'</div>\n'])
     extend_([u'        </div>\n'])
     extend_([u'    </section>\n'])
@@ -86,7 +86,7 @@ def golfers (golfers):
 
     return self
 
-golfers = CompiledTemplate(golfers, 'templates/golfers.html')
+golfers = CompiledTemplate(golfers, 'templates\\golfers.html')
 join_ = golfers._join; escape_ = golfers._escape
 
 # coding: utf-8
@@ -137,6 +137,6 @@ def index (challenges):
 
     return self
 
-index = CompiledTemplate(index, 'templates/index.html')
+index = CompiledTemplate(index, 'templates\\index.html')
 join_ = index._join; escape_ = index._escape
 
