@@ -2,6 +2,7 @@ import logging
 import web
 #gae
 from google.appengine.api import taskqueue, memcache
+from google.appengine.ext import db
 #local
 from model import Challenge
 from model import Golfer
@@ -32,8 +33,6 @@ class top:
                 golfers[h].global_rank -= n - i - 1
         logging.info('calculating rank for each golfer')
         keyfunc = lambda g: g.global_rank
-        for i, g in enumerate(sorted(golfers.values(), key=keyfunc)):
-            g.rank = i + 1 # XXX what if 2 golfer have same global rank?
-            g.put()
+        db.put(golfers.values())
         logging.info('done updating golfer ranking')
 
