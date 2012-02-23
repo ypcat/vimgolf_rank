@@ -10,18 +10,15 @@ $def with (golfers)
 </head>
 
 <body id="home">
-
     <header>
-        <h3><b>Open VimGolf Challenges</b></h3>
+        <h3>Complete VimGolf Ranking</h3>
     </header>
 
     <section>
-        <div>
+    <ol>
         $for g in golfers:
-            <div>
-                <span>${g.handle}</span> <span>${g.global_rank}</span>
-            </div>
-        </div>
+        <li><span class="top"><a href="http://vimgolf.com/${g.handle}" class="top">${g.handle}</a></span><span class="top">${g.global_rank}</span></li>
+    </ol>
     </section>
 
     <footer>
@@ -29,8 +26,11 @@ $def with (golfers)
         </p>
     </footer>
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
-
+    <script type="text/javascript">
+        jQuery('ol li:even').addClass('top-even');
+    </script>
 </body>
 
 </html>

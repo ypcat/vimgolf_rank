@@ -1,0 +1,16 @@
+li span.top {
+    display: inline-block;
+    font-family:Sans-Serif;
+    font-size:18px;
+    width: 200px;
+}
+li {
+    width: 400px;
+}
+li.top-even {
+    background: #EEE;
+}
+li span a.top {
+    text-decoration:none;
+}
+
