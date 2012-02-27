@@ -1,5 +1,6 @@
 cron:
 - description: daily update challenges
-  schedule: every 1 hours
-  url: /challenges
+  url: /cron/challenges
+  schedule: every day 15:45
+  timezone: Asia/Taipei
 
