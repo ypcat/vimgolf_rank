@@ -4,13 +4,19 @@ li span.top {
     font-size:18px;
     width: 200px;
 }
-li {
-    width: 400px;
+tr.topheader {
+    text-align: center;
 }
-li.top-even {
+tr.top-even {
     background: #EEE;
 }
-li span a.top {
+td.global_rank {
+    text-align: right;
+}
+td.rank {
+    text-align: right;
+}
+a.top {
     text-decoration:none;
 }
 

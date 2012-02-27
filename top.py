@@ -19,7 +19,7 @@ class top:
             glist = Golfer.all().order('global_rank')
             memcache.set("glist", glist);
         render = web.template.render('templates')
-        return render.golfers(glist)
+        return render.global_ranks(glist)
     def POST(self):
         """Update Golfer table from Challenge data."""
         logging.info('top()')
