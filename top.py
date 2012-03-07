@@ -1,5 +1,6 @@
 import logging
 import web
+import datetime
 #gae
 from google.appengine.api import taskqueue, memcache
 from google.appengine.ext import db
@@ -12,14 +13,26 @@ def fix_keyname(name):
         name += '@'
     return name
 
+def calc_rank(glist):
+    for i in range(len(glist)):
+        rank = i+1
+        if i==0:
+            glist[i].rank = rank
+        elif glist[i-1].global_rank == glist[i].global_rank:
+            glist[i].rank = glist[i-1].rank
+        else:
+            glist[i].rank = rank
+    return glist
+
 class top:
     def GET(self):
         glist = memcache.get('glist')
         if glist is None:
             glist = Golfer.all().order('global_rank')
             memcache.set("glist", glist);
+        glist = calc_rank(list(glist))
         render = web.template.render('templates')
-        return render.global_ranks(glist)
+        return render.global_ranks(glist, str(datetime.datetime.utcnow()))
     def POST(self):
         """Update Golfer table from Challenge data."""
         logging.info('top()')

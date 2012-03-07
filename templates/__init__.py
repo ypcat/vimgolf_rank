@@ -43,7 +43,7 @@ challenges = CompiledTemplate(challenges, 'templates\\challenges.html')
 join_ = challenges._join; escape_ = challenges._escape
 
 # coding: utf-8
-def global_ranks (golfers):
+def global_ranks (golfers, date):
     __lineoffset__ = -4
     loop = ForLoop()
     self = TemplateResult(); extend_ = self.extend
@@ -59,7 +59,7 @@ def global_ranks (golfers):
     extend_([u'\n'])
     extend_([u'<body id="home">\n'])
     extend_([u'    <header>\n'])
-    extend_([u'        <h3>Complete VimGolf Rankings</h3>\n'])
+    extend_([u'    <h3>Complete <a href="http://vimgolf.com">VimGolf</a> Rankings</h3>\n'])
     extend_([u'    </header>\n'])
     extend_([u'    <div>\n'])
     extend_([u'        <p>Here is the official definition of rankings:</p>\n'])
@@ -67,13 +67,14 @@ def global_ranks (golfers):
     extend_([u'            <li>Global rank is the sum of your ranks on each challenge</li>\n'])
     extend_([u'            <li>Skipping a challenge implicitly yields the lowest rank</li>\n'])
     extend_([u'        </ul>\n'])
+    extend_([u'        <p>Created on ', escape_(date, True), u' by jyunfan@gmail.com and ypcat6@gmail.com</p>\n'])
     extend_([u'    </div>\n'])
     extend_([u'    <section>\n'])
     extend_([u'    <table>\n'])
     extend_([u'        <tr class="topheader"><td>Ranking</td><td>ID</td><td>Global Rank</td></tr>\n'])
     for g in loop.setup(golfers):
         extend_(['        ', u'<tr class="top">\n'])
-        extend_(['        ', u'    <td class="rank"></td>\n'])
+        extend_(['        ', u'    <td class="rank">', escape_((g.rank), True), u'</td>\n'])
         extend_(['        ', u'    <td><a href="http://vimgolf.com/', escape_((g.handle), True), u'" class="top">', escape_((g.handle), True), u'</a></td>\n'])
         extend_(['        ', u'    <td class="global_rank">', escape_((g.global_rank), True), u'</td>\n'])
         extend_(['        ', u'</tr>\n'])

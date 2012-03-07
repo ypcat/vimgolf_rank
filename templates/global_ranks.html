@@ -1,4 +1,4 @@
-$def with (golfers)
+$def with (golfers, date)
 
 <!DOCTYPE HTML>
 <html>
@@ -11,7 +11,7 @@ $def with (golfers)
 
 <body id="home">
     <header>
-        <h3>Complete VimGolf Rankings</h3>
+    <h3>Complete <a href="http://vimgolf.com">VimGolf</a> Rankings</h3>
     </header>
     <div>
         <p>Here is the official definition of rankings:</p>
@@ -19,13 +19,14 @@ $def with (golfers)
             <li>Global rank is the sum of your ranks on each challenge</li>
             <li>Skipping a challenge implicitly yields the lowest rank</li>
         </ul>
+        <p>Created on $date by jyunfan@gmail.com and ypcat6@gmail.com</p>
     </div>
     <section>
     <table>
         <tr class="topheader"><td>Ranking</td><td>ID</td><td>Global Rank</td></tr>
         $for g in golfers:
             <tr class="top">
-                <td class="rank"></td>
+                <td class="rank">${g.rank}</td>
                 <td><a href="http://vimgolf.com/${g.handle}" class="top">${g.handle}</a></td>
                 <td class="global_rank">${g.global_rank}</td>
             </tr>
