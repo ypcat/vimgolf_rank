@@ -1,0 +1,22 @@
+li span.top {
+    display: inline-block;
+    font-family:Sans-Serif;
+    font-size:18px;
+    width: 200px;
+}
+tr.topheader {
+    text-align: center;
+}
+tr.top-even {
+    background: #EEE;
+}
+td.global_rank {
+    text-align: right;
+}
+td.rank {
+    text-align: right;
+}
+a.top {
+    text-decoration:none;
+}
+

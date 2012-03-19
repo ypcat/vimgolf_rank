@@ -7,8 +7,7 @@ class Challenge(db.Model):
 
 class Golfer(db.Model):
     handle         = db.StringProperty(indexed=False)
-    global_rank    = db.IntegerProperty(indexed=False)    # sum of ranks of all challenges
-    rank           = db.IntegerProperty(indexed=False)
+    global_rank    = db.IntegerProperty(indexed=True)    # sum of ranks of all challenges
 
 class Counter(db.Model):
     count          = db.IntegerProperty(indexed=False)
